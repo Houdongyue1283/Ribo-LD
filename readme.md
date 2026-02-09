@@ -61,14 +61,4 @@ bash src/train_rfam.sh
 - `vae_checkpoint/`: AE checkpoints, logs, extracted latent vectors
 - `diffusion_results*/`: diffusion logs, checkpoints, and samples (depending on mode)
 
-## Citation
-
-```bibtex
-@article{ribo_ld_2026,
-  title   = {Ribo-LD: Latent diffusion for functional ribozyme sequence design},
-  author  = {xxxxx},
-  journal = {xxxxx},
-  year    = {xxxxxx}
-}
-```
 
