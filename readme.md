@@ -1,5 +1,5 @@
 
-# Ribo-LD:  Feedback Latent Diffusion for Novel Functional RNA Ribozyme Generative Design
+# Activity-Guided Generative Design of Functional Ribozymes Using Latent Diffusion Modeling
 
 Ribo-LD is a two-stage generative framework for ribozyme design, and can be readily adapted to other functional RNA design tasks. It consists of:
 
