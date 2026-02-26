@@ -5,6 +5,7 @@ Ribo-LD is a two-stage generative framework for ribozyme design, and can be read
 
 1) an **autoencoder (AE)** learns a continuous latent space
 2) a **1D latent diffusion model** learns the latent distribution and generates new latents, which are then **decoded** back to sequences
+The diffusion module is based on: https://github.com/lucidrains/denoising-diffusion-pytorch
 
 The repository includes both:
 - **Supervised** mode: AE includes an activity regressor; diffusion can evaluate activity during training (optional dataset optimization)
