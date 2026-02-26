@@ -1442,16 +1442,6 @@ def train_and_evaluate(
     x_true_labels = np.argmax(x_true_seq, axis=2)  # (N, seq_len) - ground-truth classes
     
     reconstruction_accuracy = np.mean(x_rec_pred == x_true_labels)  # overall per-position accuracy
-    # Additionally save latent vectors with activity > 0.5
-    high_activity_indices = np.where(y_true > 0.5)[0]
-    if all_latent_vecs and len(high_activity_indices) > 0:
-        latent_vectors = np.concatenate(all_latent_vecs, axis=0)
-        high_activity_latents = latent_vectors[high_activity_indices]
-        print(len(high_activity_latents))
-        high_activity_save_path = os.path.join(checkpoint_dir, f"latent_vectors_high_activity_{arch}_{rbz_type}.npy")
-        np.save(high_activity_save_path, high_activity_latents)
-        print(f"High-activity latent vectors (activity > 0.5) saved to {high_activity_save_path}")
-        print(f"Total high-activity latent vectors saved: {high_activity_latents.shape[0]}")
     # Save latent vectors to file
     if all_latent_vecs:
         latent_vectors = np.concatenate(all_latent_vecs, axis=0)
